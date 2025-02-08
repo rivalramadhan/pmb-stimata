@@ -10,5 +10,6 @@ class UserController extends Controller
     {
         $users = User::all();
         return view('User.ManageUser', compact('users'));
+    
     }
 }
