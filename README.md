@@ -1,6 +1,6 @@
 # pmb-stimata
 
-Welcome to the new pmb-stimata. This repository contains the source code for a web application used in the new student admission process at an educational institution.
+The purpose of creating this website is to assist in managing the new student admission process at the campus, which previously used a manual system.
 
 ## Features
 
@@ -21,7 +21,7 @@ Welcome to the new pmb-stimata. This repository contains the source code for a w
   - Laravel Framework
 
 - Database:
-  - mysql
+  - Mysql
 
 ## Installation
 
@@ -29,7 +29,7 @@ To run this project locally, follow these steps:
 
 1. Clone this repository
    ```bash
-   git clone https://github.com/username/new-student-admission-website.git
+   git clone https://github.com/rivalramadhan/pmb-stimata.git
 
 2. Navigate to the project directory
    ```bash
@@ -39,3 +39,17 @@ To run this project locally, follow these steps:
    ```bash
    composer install
    npm install
+
+4. Copy "example.env" and configure the db
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+
+5. Run the db migrations
+    ```bash
+    php artisan migrate
+
+6. Start development server
+    ```bash
+    php artisan serve
+    npm run dev
