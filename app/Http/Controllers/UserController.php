@@ -36,7 +36,7 @@ class UserController extends Controller
             'role' => 'user',
         ]);
 
-        return redirect()->route('users.ManageUser')->with('success', 'User created successfully.');
+        return redirect()->route('User.ManageUser')->with('success', 'User created successfully.');
     }
 
 }

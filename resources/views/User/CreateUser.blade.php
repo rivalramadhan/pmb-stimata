@@ -26,7 +26,7 @@
         </div>
         <div>
             <label for="phone">Phone:</label>
-            <input type="datetime-local" id="phone" name="phone" value="{{ old('phone') }}">
+            <input type="number" id="phone" name="phone" value="{{ old('phone') }}">
         </div>
         <div>
             <label for="password">Password:</label>
