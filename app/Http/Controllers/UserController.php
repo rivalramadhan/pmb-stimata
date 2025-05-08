@@ -36,14 +36,10 @@ class UserController extends Controller
             'phone' => $request->phone,
             'password' => Hash::make($request->password),
             'role' => 'user',
+            ''
         ]);
 
-        return redirect()->route('User.ManageUser')->with('success', 'User created successfully.');
-    }
-    public function show($id)
-    {
-        $user = User::findOrFail($id);
-        return view('User.ShowUser', compact('user'));
+        return view('User.ManageUser')->with('success', 'User created successfully.');
     }
     public function edit($id)
     {

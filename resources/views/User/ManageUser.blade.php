@@ -12,7 +12,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
-                <th>Username</th>
+                <th>Password hash</th>
             </tr>
         </thead>
         <tbody>
