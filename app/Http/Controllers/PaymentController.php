@@ -29,7 +29,7 @@ class PaymentController extends Controller
             'image_path' => 'required|string|max:255',
         ]);
 
-        User::create([
+        Payment::create([
             'fullname' => $request->fullname,
             'amount' => $request->amount,
             'status' => $request->status,
