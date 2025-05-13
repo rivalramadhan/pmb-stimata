@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->string('fullname');
+            // $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('amount');
             $table->string('image_path');
             $table->string('status')->default('pending');
