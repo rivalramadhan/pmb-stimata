@@ -8,7 +8,7 @@ class PaymentController extends Controller
 {
     public function index()
     {
-        return view('Payment.Payment');
+        return view('Payment.ManagePayment');
     }
 
     public function create()
@@ -18,8 +18,15 @@ class PaymentController extends Controller
 
     public function store(Request $request)
     {
-        
+        $request->validate([
+            'amount' => 'required|string|min:0',
+            'payment_method' => 'required|string|max:255',
+            'description' => 'nullable|string|max:255',
+            'status' => 'required|string|in:pending,completed,cancelled',
+            'notes' => 'nullable|string|max:255',
+            'image_path' => 'required|string|max:255',
+        ]);
 
-        return redirect()->route('payment.index')->with('success', 'Payment created successfully.');
+        return view('payment.ManagePayment')->with('success', 'Payment created successfully.');
     }
 }
