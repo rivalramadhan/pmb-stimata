@@ -9,9 +9,9 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Full Name</th>
                 <th>Ammount</th>
                 <th>Image</th>
-                <th>User ID</th>
                 <th>Status</th>
                 <th>Notes</th>
                 <th>Created At</th>
@@ -22,9 +22,9 @@
             @foreach ($payments as $payment)
                 <tr>
                     <td>{{ $payment->id }}</td>
-                    <td>{{ $payment->ammount }}</td>
-                    <td>{{ $payment->image }}</td>
-                    <td>{{ $payment->user_id }}</td>
+                    <td>{{ $payment->fullname }}</td>
+                    <td>{{ $payment->amount}}</td>
+                    <td>{{ $payment->image_path }}</td>
                     <td>{{ $payment->status }}</td>
                     <td>{{ $payment->notes }}</td>
                     <td>{{ $payment->created_at }}</td>
