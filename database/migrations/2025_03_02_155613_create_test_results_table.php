@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('test_results', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            // $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->string('fullname');
             $table->string('study_program');
             $table->string('enrollment_path');
             $table->string('status')->default('pending');
