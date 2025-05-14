@@ -23,7 +23,8 @@ class TestResultController extends Controller
         $request->validate([
             'fullname' => 'required|string|max:255',
             'study_program' => 'required|string|max:255',
-            'enrollment_path' => 'required|string|max:255',
+            'test_date' => 'required|date',
+            'test_score' => 'required|integer|min:0|max:100',
             'status' => 'required|string|max:255',
             'notes' => 'nullable|string|max:255',
         ]);

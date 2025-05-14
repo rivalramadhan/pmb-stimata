@@ -24,7 +24,8 @@
                     <td>{{ $test_result->id }}</td>
                     <td>{{ $test_result->fullname }}</td>
                     <td>{{ $test_result->study_program}}</td>
-                    <td>{{ $test_result->enrollment_path }}</td>
+                    <td>{{ $test_result->test_date }}</td>
+                    <td>{{ $test_result->test_score }}</td>
                     <td>{{ $test_result->status }}</td>
                     <td>{{ $test_result->notes }}</td>
                     <td>{{ $test_result->created_at }}</td>

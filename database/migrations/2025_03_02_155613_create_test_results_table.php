@@ -15,7 +15,8 @@ return new class extends Migration
             // $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('fullname');
             $table->string('study_program');
-            $table->string('enrollment_path');
+            $table->date('test_date');
+            $table->integer('test_score');
             $table->string('status')->default('pending');
             $table->string('notes')->nullable();
             $table->timestamps();
