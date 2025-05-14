@@ -11,7 +11,8 @@
                 <th>Id</th>
                 <th>Full Name</th>
                 <th>study program</th>
-                <th>enrollment path</th>
+                <th>Test Date</th>
+                <th>Test Score</th>
                 <th>status</th>
                 <th>Notes</th>
                 <th>Created At</th>
