@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class TestResultController extends Controller
 {
-    public function index()    
+    public function index()
     {
-        $testResults = TestResult::all();
-        return view('TestResult.ManageTestRes');
+        $testresults = TestResult::all();
+        return view('TestResult.ManageTestRes', compact('testresults'));
     }
 
     public function create()

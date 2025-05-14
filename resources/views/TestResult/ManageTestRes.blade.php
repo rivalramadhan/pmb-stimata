@@ -19,7 +19,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($test_results as $test_result)
+            @foreach ($testresults as $test_result)
                 <tr>
                     <td>{{ $test_result->id }}</td>
                     <td>{{ $test_result->fullname }}</td>
