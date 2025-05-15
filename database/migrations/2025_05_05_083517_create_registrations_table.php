@@ -13,12 +13,14 @@ return new class extends Migration
     {
         Schema::create('registrations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->string('enrollment_path');
-            $table->string('semester');
-            $table->string('academic_year');
-            $table->string('degree_program');
+            // $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->string('fullname');
+            $table->string('graduation_year');
+            $table->string('highschool_major');
+            $table->string('first_program_choice');
+            $table->string('second_program_choice');
             $table->string('status')->default('pending');
+            $table->string('notes')->nullable();
             $table->timestamps();
         });
     }

@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->string('fullname');
-            // $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->string('amount');
-            $table->string('image_path');
-            $table->string('status')->default('pending');
+            $table->string('date_of_payment');
+            $table->string('bank_name');
+            $table->string('transfer_receipt_image');
+            $table->string('payment_status')->default('pending');
             $table->string('notes')->nullable();
             $table->timestamps();
         });

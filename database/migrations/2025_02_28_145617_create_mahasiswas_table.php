@@ -11,35 +11,30 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mahasiswa', function (Blueprint $table) {
+        Schema::create('personal_information', function (Blueprint $table) {
             $table->id();
-            $table->string('nik')->unique();
-            $table->string('nisn')->unique();
-            $table->string('email_stimata');
-            $table->string('nama_lengkap')->unique();
-            $table->string('email')->unique();
-            $table->string('nomor_hp');
-            $table->string('jenis_kelamin');
-            $table->string('tempat_lahir');
-            $table->date('tanggal_lahir');
-            $table->string('agama');
-            $table->string('asal_sekolah');
-            $table->string('alamat_asal');
-            $table->string('alamat_domisili');
-            $table->string('nama_ayah');
-            $table->string('nama_ibu');
-            $table->string('kwarganegaraan');
-            $table->string('alat_transportasi');
-            $table->string('tahun_masuk');
-            $table->date('tanggal_daftar');
-            $table->string('periode_daftar');
-            $table->string('jalur_pendaftaran');
-            $table->string('prodi');
+            $table->string('fullname');
+            $table->string('student_id')->unique();
+            $table->string('gender');
+            $table->string('place_of_birth');
+            $table->date('date_of_birth');
+            $table->string('religion');
+            $table->string('blood_type');
+            $table->string('nationality');
+            $table->string('province');
+            $table->string('city');
+            $table->string('village');
+            $table->string('neighborhood_association');
+            $table->string('community_association');
+            $table->string('full_address');
+            $table->string('postal_code');
+            $table->string('phone_number');
             $table->timestamps();
         });
     }
     public function down(): void
     {
         Schema::dropIfExists('mahasiswa');
+        Schema::dropIfExists('personal_information');
     }
 };
